@@ -1,0 +1,38 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  backend-deployment
+  namespace: hotelapp
+spec:
+  selector:
+    matchLabels:
+      app: hotelapp-backend
+  replicas: 1
+  template:
+    metadata:
+      name:  hotelapp-backend-pod
+      namespace:  hotelapp
+      labels:
+        app: hotelapp-backend
+    spec:
+      containers:
+      - name:  hotelapp-backend
+        image:  vilasDevops/hotelbackend:latest       
+        ports:
+        - containerPort:  5001
+        env:
+        - name:  NODE_ENV
+          value:  deployment
+        - name:  MONGODB_URI
+          valueFrom:
+            secretKeyRef:
+              name: hotelapp-secrets
+              key: mongodb-uri
+        - name:  JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name:  hotelapp-secrets
+              key:  jwt
+        
+      restartPolicy: Always
