@@ -1,6 +1,5 @@
-
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: mongodb-deployment
   namespace: hotelapp
@@ -11,9 +10,7 @@ spec:
       app: mongodb
   template:
     metadata:
-      name: mongodb-pod
-      namespace: hotelapp
-      labels: 
+      labels:
         app: mongodb
     spec:
       containers:
@@ -32,6 +29,9 @@ spec:
             secretKeyRef:
               name: hotelapp-secrets
               key: password
+        volumeMounts:
+        - name: mongo-data
+          mountPath: /data/db
       volumes:
       - name: mongo-data
         persistentVolumeClaim:

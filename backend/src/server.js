@@ -5,7 +5,7 @@ import { connectDB } from './config/db.js';
 dotenv.config({ path: process.env.ENV_PATH || '.env' });
 
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017';
+const MONGO_URI = 'mongodb://root:root@mongodb-service:27017/hotelbooking?authSource=admin';
 
 const start = async () => {
   await connectDB(MONGO_URI);

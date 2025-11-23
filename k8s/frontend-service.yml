@@ -1,0 +1,14 @@
+
+kind: Service
+apiVersion: v1
+ metadeta:
+name: frontend-service
+namespace: hotelapp
+spec: 
+  selector:
+    app: frontend
+  type: ClusterIP
+  ports:
+    protocol: TCP
+    port: 5173
+    targetPort: 5173
