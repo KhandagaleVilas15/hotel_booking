@@ -1,0 +1,59 @@
+kubectl port-forward svc/backend-service 5000:5000 --address 0.0.0.0 -n hotelapp &
+ 1219  sudo lsof -i :5000
+ 1220  kill -p 5920
+ 1221  kill -9 5920
+ 1222  kubectl port-forward svc/backend-service 5000:5000 --address 0.0.0.0 -n hotelapp &
+ 1223  ls
+ 1225  kubectl apply -f  frontend-deployment.yml
+ 1226  kubectl apply -f frontend-service.yml
+ 1227  nano frontend-service.yml
+ 1228  kubectl apply -f frontend-service.yml
+ 1229  nano frontend-service.yml
+ 1230  cat frontend-deployment.yml
+ 1232  nano frontend-service.yml
+ 1233  cat frontend-service.yml
+ 1234  rm frontend-service.yml
+ 1235  nano frontend-service.yml
+ 1236  kubectl apply -f frontend-service.yml
+ 1237  kubectl port-forward svc/backend-service 5073:5073 --address 0.0.0.0 -n hotelapp &
+ 1238  kubectl port-forward svc/frontend-service 5073:5073 --address 0.0.0.0 -n hotelapp &
+ 1239  nano frontend-service.yml
+ 1240  cd ..
+ 1241  ls
+ 1242  cd ..
+ 1243  kubectl port-forward svc/backend-service 5173:5173 --address 0.0.0.0 -n hotelapp &
+ 1244  cat frontend-deployment.yml
+ 1245  cat backend-deployment.yml
+ 1246  nano frontend-deployment.yml
+ 1247  kubectl apply -f frontend-deployment.yml
+ 1248  kubectl apply -f frontend-service.yml
+ 1249  kubectl port-forward svc/backend-service 5173:5173 --address 0.0.0.0 -n hotelapp &
+ 1250  cat frontend-service.yml
+ 1251  kubectl get pods -n hotelapp
+ 1252  kubectl describe pods frontend-deployment-7947f6dc5b-qp9vt -n hotelapp
+ 1253  kubectl logs frontend-deployment-7947f6dc5b-qp9vt -n hotelapp
+ 1254  curl http://localhost:5000
+ 1255  curl http://localhost:5000/api/deals
+ 1256  curl -I http://localhost:5000/api/deals
+ 1257  cd hotelbooking/hotel_booking/
+ 1258  ls
+ 1260  kubectl apply -f frontend-deployment.yml
+ 1261  kubectl apply -f frontend-service.yml
+ 1262  kubectl port-forward svc/frontend-service 5173:5173 --address 0.0.0.0 -n hotelapp
+ 1263  sudo lsof -i :5173
+ 1264  kill -9 1629
+ 1265  sudo lsof -i :5173
+ 1266  kill -9 1637
+ 1267  kubectl port-forward svc/frontend-service 5173:5173 --address 0.0.0.0 -n hotelapp
+ 1268  docker ps
+ 1269  docker images
+ 1270  docker  image prune -a
+ 1271  docker images
+ 1274  kubectl exec -it frontend-deployment-7947f6dc5b-qp9vt - bash
+ 1275  kubectl exec -it frontend-deployment-7947f6dc5b-qp9vt - bash -n hotalapp
+ 1276  kubectl exec -it frontend-deployment-7947f6dc5b-qp9vt -n hotelapp -- bash
+ 1277  kubectl exec -it frontend-deployment-7947f6dc5b-qp9vt -n hotelapp -- sh
+ 1278  cd ..
+ 1279  cd k8s/
+ 1280  ls
+ 1281  cat frontend-deployment.yml

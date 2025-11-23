@@ -19,5 +19,5 @@ spec:
       - name:  hotelapp-frontend
         image:  vilasdevops/hotel-frontend:latest
         ports:
-        - containerPort:  5073
+        - containerPort:  5173
       restartPolicy: Always
